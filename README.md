@@ -1,4 +1,4 @@
-#  ✨Swag Labs - Testes Automatizados com Cypress & TypeScript 💜
+#  ✨Swag Labs - Testes Automatizados com Cypress 💜
 
 
 
