@@ -58,6 +58,17 @@ class LoginPage {
         cy.get(ErrorMsgLogin.errorMessage).should('contain', 'Epic sadface: Sorry, this user has been locked out.')
     }
 
+    tiposdelogin(){
+      const usuarios = [
+        { username: "standard_user", password: "secret_sauce", description: "Usuário padrão" },
+        { username: "locked_out_user", password: "secret_sauce", description: "Usuário bloqueado" },
+        { username: "problem_user", password: "secret_sauce", description: "Usuário com problemas" },
+        { username: "performance_glitch_user", password: "secret_sauce", description: "Usuário com glitch de performance" },
+        { username: "error_user", password: "secret_sauce", description: "Usuário com erro" },
+        { username: "visual_user", password: "secret_sauce", description: "Usuário visual"}
+      ]
+    }
+
 
 
 
