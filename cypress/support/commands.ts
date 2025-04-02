@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+declare namespace Cypress {
+  interface Chainable {
+    /**
+     * Comando customizado para login
+     * @example cy.login('standard_user', 'secret_sauce')
+     */
+    login(username: string, password: string): Chainable<void>;
+  }
+}
+
+Cypress.Commands.add('login', (username: string, password: string) => {
+    cy.visit('/'); // Abre a página de login
+    cy.get('[data-test="username"]').type(username); // Insere o username
+    cy.get('[data-test="password"]').type(password); // Insere a senha
+    cy.get('[data-test="login-button"]').click(); // Clica no botão de login
+  });
+  
